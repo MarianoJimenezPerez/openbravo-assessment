@@ -8,4 +8,7 @@ body {
   margin: 0 auto;
   display: flex;
   justify-content: center;
+  font-family: $font-family;
+  color: $text-color;
+  background-color: $primary-color;
 }
