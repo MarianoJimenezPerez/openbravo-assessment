@@ -1,0 +1,15 @@
+@import "@/styles/base/variables";
+.btn {
+  border: 1px solid $tertiary-color;
+  padding: 5px 20px;
+  text-align: center;
+  border-radius: $border-radius;
+  background-color: $secondary-color;
+  color: $white;
+  text-transform: capitalize;
+  cursor: pointer;
+  transition: all ease-out 0.1s;
+  &:hover {
+    opacity: 0.8;
+  }
+}

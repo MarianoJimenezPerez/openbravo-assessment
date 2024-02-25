@@ -1,0 +1,17 @@
+@import "@/styles/base/variables";
+.search-bar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  width: 100%;
+  margin-top: 20px;
+  &__input {
+    border-radius: $border-radius;
+    outline: none;
+    border: 1px solid $tertiary-color;
+    padding: 4px 10px;
+    height: 26px;
+    width: 300px;
+  }
+}
