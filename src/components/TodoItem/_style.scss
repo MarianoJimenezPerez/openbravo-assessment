@@ -1,0 +1,58 @@
+@import "@/styles/base/variables";
+.todo-item {
+  background-color: $white;
+  border-radius: 8px;
+  padding: 5px 20px;
+  border: 1px solid $accent-color--light;
+  font-size: 14px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  &.active {
+    border: 1px solid $secondary-color;
+  }
+  &__description {
+    h3 {
+      font-size: 14px;
+      font-weight: 400;
+      color: $text-color;
+    }
+  }
+  &__status {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    position: relative;
+    width: 110px;
+    cursor: pointer;
+    span {
+      font-size: 13px;
+      font-weight: 400;
+      color: $accent-color--light;
+      &.active {
+        color: $secondary-color;
+      }
+    }
+    p {
+      font-size: 15px;
+      color: $accent-color;
+      font-weight: 700;
+      text-transform: uppercase;
+      &.active {
+        color: $secondary-color;
+      }
+    }
+    &::before {
+      content: "";
+      height: 100%;
+      background-color: $accent-color--light;
+      width: 1px;
+      position: absolute;
+      top: 0;
+      left: -10px;
+      .active & {
+        background-color: $secondary-color;
+      }
+    }
+  }
+}
