@@ -1,15 +1,15 @@
 import { afterEach, describe, expect, it } from "vitest";
 import { cleanup, render, screen } from "@testing-library/react";
-import SearchBar from "../SearchBar";
+import AddTodoBar from "../AddTodoBar";
 import { TodoProvider } from "@/context/TodoContext";
 
-describe("<SearchBar />", () => {
+describe("<AddTodoBar />", () => {
   afterEach(cleanup);
 
   it("Should render a form", () => {
     render(
       <TodoProvider>
-        <SearchBar />
+        <AddTodoBar />
       </TodoProvider>
     );
 
@@ -19,7 +19,7 @@ describe("<SearchBar />", () => {
   it("Should render a button width 'Add Todo' text", () => {
     render(
       <TodoProvider>
-        <SearchBar />
+        <AddTodoBar />
       </TodoProvider>
     );
 

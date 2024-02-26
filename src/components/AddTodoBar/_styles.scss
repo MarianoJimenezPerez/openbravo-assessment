@@ -1,11 +1,14 @@
 @import "@/styles/base/variables";
-.search-bar {
+.add-todo-bar {
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 20px;
   width: 100%;
   margin-top: 20px;
+  @media screen and (max-width: $sm) {
+    flex-direction: column;
+  }
   &__input {
     border-radius: $border-radius;
     outline: none;

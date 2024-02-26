@@ -1,11 +1,11 @@
 import Title from "@/components/Title/Title";
-import SearchBar from "../SearchBar/SearchBar";
+import AddTodoBar from "../AddTodoBar/AddTodoBar";
 
 const Heading: React.FC = () => {
   return (
     <section>
       <Title title="TODO list" />
-      <SearchBar />
+      <AddTodoBar />
     </section>
   );
 };

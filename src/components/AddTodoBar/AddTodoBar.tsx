@@ -3,11 +3,11 @@ import { useTodoContext } from "@/hooks/useTodoContext";
 import Button from "../Button/Button";
 import "./_styles.scss";
 
-interface SearchBarProps {
+interface AddTodoBarProps {
   placeholder?: string;
 }
 
-const SearchBar: React.FC<SearchBarProps> = ({ placeholder }) => {
+const AddTodoBar: React.FC<AddTodoBarProps> = ({ placeholder }) => {
   const { addTodo } = useTodoContext();
   const [newTodo, setNewTodo] = useState<string>("");
 
@@ -19,13 +19,13 @@ const SearchBar: React.FC<SearchBarProps> = ({ placeholder }) => {
 
   return (
     <form
-      className="search-bar"
+      className="add-todo-bar"
       aria-label="Search input"
       onSubmit={(e) => handleAddTodo(e)}
     >
       <input
         type="text"
-        className="search-bar__input"
+        className="add-todo-bar__input"
         value={newTodo}
         placeholder={placeholder ? placeholder : ""}
         onChange={(e) => setNewTodo(e.target.value)}
@@ -35,4 +35,4 @@ const SearchBar: React.FC<SearchBarProps> = ({ placeholder }) => {
   );
 };
 
-export default SearchBar;
+export default AddTodoBar;

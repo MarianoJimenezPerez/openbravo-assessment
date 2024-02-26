@@ -8,6 +8,12 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  @media screen and (max-width: $sm) {
+    flex-direction: column-reverse;
+    gap: 25px;
+
+    align-items: flex-start;
+  }
   &.active {
     border: 1px solid $secondary-color;
   }
@@ -52,6 +58,9 @@
       left: -10px;
       .active & {
         background-color: $secondary-color;
+      }
+      @media screen and (max-width: $sm) {
+        height: 0%;
       }
     }
   }
